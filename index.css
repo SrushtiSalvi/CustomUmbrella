@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgb(212, 236, 252);
+}
+
+.grid-container {
+  position: absolute;
+  display: grid;
+  grid: auto auto / 1fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.img {
+  position: absolute;
+  display: fixed;
+  width: 90vh;
+  height: 80vh;
+  z-index: 0;
+}
+
+.company_logo {
+  display: flex;
+  position: relative;
+  width: 80vh;
+  height: 70vh;
+  z-index: 1;
+  justify-content: center;
+  align-items: end;
+  /* background-color: brown; */
+}
+
+.right {
+  height: screen;
+  display: flex;
+  flex-direction: column;
+  content: center;
+  padding: 0 50px;
+  justify-content: center;
+}
+
+.color-palette {
+  display: flex;
+}
+
+.color {
+  display: flex;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  margin-right: 7px;
+}
+
+.color.selected {
+  border: 2px solid black;
+}
+
+.color.blue {
+  background-color: rgb(32, 169, 234);
+}
+
+.color.pink {
+  background-color: rgb(218, 80, 137);
+}
+
+.color.yellow {
+  background-color: rgb(255, 206, 62);
+}
+
+.info {
+  position: relative;
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: center;
+  line-height: 0.5em;
+  margin: 15px 0;
+}
+
+h1 {
+  font-size: 60px;
+  color: black;
+}
+
+/* .img_input {
+  position: relative;
+  display: flex;
+  width: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.fileInputLabel {
+  display: flex;
+  background-color: rgb(32, 169, 234);
+  width: 100vh;
+  height: 7vh;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  padding: 7px;
+}
+
+.uploadIconButton {
+  position: absolute;
+  color: white;
+  width: 5vh;
+  height: 5vh;
+  fill: white;
+  z-index: 1;
+}
+
+.loaderIconButton {
+  position: absolute;
+  width: 5vh;
+  height: 5vh;
+  display: none;
+  fill: white;
+  animation-name: rotateLoader;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  z-index: 0;
+}
+
+.inputfileText {
+  /* position: absolute; */
+  justify-content: center;
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  font-size: x-large;
+}
+
+.fileInput {
+  position: absolute;
+  display: none;
+}
+
+#output {
+  width: 20vh;
+  height: 6vh;
+  display: none;
+}
+
+.loader {
+  position: absolute;
+  display: none;
+  width: 40%;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+  fill: brown;
+  animation-name: rotateLoader;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+#cancelIcon {
+  font-weight: lighter;
+  color: white;
+  font-size: xx-large;
+  display: none;
+  z-index: 2;
+  background-color: blueviolet;
+}
+
+@keyframes rotateLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
